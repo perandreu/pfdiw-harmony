@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <RootView />,
     children: [
       {
-        path: "me/chat/:personId",
+        path: "me/chat/:id",
         element: <PersonalView type="chat" />
       },
       {
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         element: <PersonalView type="friends" />
       },
       {
-        path: "me/group/:groupId",
+        path: "me/group/:id",
         element: <PersonalView type="group" />
       },
       {
