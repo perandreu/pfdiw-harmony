@@ -6,8 +6,7 @@ function ServerButton( {id,serverId,name,img} ) {
         backgroundPosition: 'center',  
 
         width: '50px',
-        height: '50px',
-        shadow: 'green'
+        height: '50px'
     }
     const letterStyle = {
         backgroundColor: 'rgba(0, 0, 0, 0.65)', 
