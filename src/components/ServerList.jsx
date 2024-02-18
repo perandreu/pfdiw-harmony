@@ -1,6 +1,6 @@
 import ServerButton from './ServerButton';
 
-import {exampleServerList} from '../exampleResources/examples';
+import {exampleServerList, plusImage} from '../exampleResources/examples';
 
 const renderedButtons = [];
 
@@ -18,9 +18,11 @@ function ServerList() {
         <>
             <div className='d-flex container-fluid'>
                 {renderedButtons}
+                <ServerButton index={"none"} key={'addServer'} img={plusImage.img} name={'Add New Server'} />
             </div>
         </>
     )
 }
+
 
 export default ServerList;

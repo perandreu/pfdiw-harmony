@@ -15,9 +15,6 @@ function ChatButton({ index, key, name, img, type, members }) {
         right:'0px'
     }
 
-
-
-
     const membersCount = (type == "group") ? <div className="fst-italic">{members} members</div> : "";
 
     return (

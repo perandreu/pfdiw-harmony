@@ -16,11 +16,13 @@ function ServerButton( {index,key,name,img} ) {
         
     }
 
+    const isAddButton = (index == "none") ? '' : <div className="rounded-circle" style={letterStyle}> {name[0]} </div> ;
+
     return (
         <>
             <div className="rounded bg-secondary rounded-5 rounded-top-0 mx-1">
-                <button className="rounded-circle btn" id={key} style={buttonStyle} alt={name} title={name}>
-                    <div className="rounded-circle" style={letterStyle}> {name[0]} </div>
+                <button className="rounded-circle btn-primary btn" id={key} style={buttonStyle} alt={name} title={name}>
+                    {isAddButton}
                 </button>
             </div>
         </>
