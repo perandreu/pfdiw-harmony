@@ -14,7 +14,10 @@ function DirectMessages() {
 
     return (
         <>
-            <div className='overflow-y-auto'>
+            <div className='overflow-y-auto' style={{
+        width: '210px',
+        height: 'auto'
+    }}>
                 {renderedChats}
             </div>
         </>

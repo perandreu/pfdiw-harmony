@@ -39,9 +39,6 @@ function UserMenu() {
             <div className="form-control form-control-sm" style={boxStyle}>
                 <input className="form-control form-control-sm bg-black" type="text" name="searchChats" id="searchChats" placeholder="Busca una conversación" />
             </div>
-            <div style={boxStyle}>
-                <DirectMessages />
-            </div>
         </>
     )
 }
