@@ -1,30 +1,37 @@
 function ServerButton( {index,key,name,img} ) {
     
-    const buttonStyle = {
-        backgroundImage: `url("${img}")`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',  
-
-        width: '50px',
-        height: '50px'
-    }
     const letterStyle = {
         backgroundColor: 'rgba(0, 0, 0, 0.65)', 
         width: '25px',
         height: '25px',
         color: 'white'
-        
+    }
+
+    const buttonStyle = {
+        minWidth:'60px',
+        minHeight:'60px',
+        width: '60px',
+        height: '60px'
+    }
+    const imgStyle = {
+        backgroundImage: `url("${img}")`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minWidth:'55px',
+        minHeight:'55px',
+        width: '55px',
+        height: '55px'
     }
 
     const isAddButton = (index == "none") ? '' : <div className="rounded-circle" style={letterStyle}> {name[0]} </div> ;
 
     return (
         <>
-            <div className="rounded bg-secondary rounded-5 rounded-top-0 mx-1">
-                <button className="rounded-circle btn-primary btn" id={key} style={buttonStyle} alt={name} title={name}>
+            <button className="btn btn-dark rounded-5 rounded-top-0 mx-1 d-flex justify-content-center" style={buttonStyle} id={key} alt={name} title={name}>
+                <div className="img-thumbnail rounded-circle d-flex align-items-center justify-content-center" style={imgStyle}>
                     {isAddButton}
-                </button>
-            </div>
+                </div>
+            </button>
         </>
     )
 }
