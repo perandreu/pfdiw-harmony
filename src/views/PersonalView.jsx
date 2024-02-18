@@ -20,7 +20,7 @@ function selectView(type) {
 function PersonalView({ type }) {
     const { id } =  useParams();
     return(
-        <div className="d-flex flex-row">
+        <div className="row g-0">
             {selectView(type)}
             <DirectMessagesView />
         </div>

@@ -4,7 +4,7 @@ import { Button, Form, InputGroup, Table } from "react-bootstrap";
 
 function AllFriends() {
     return(
-        <div className="d-flex flex-column w-25">
+        <div className="col-11 d-flex flex-column">
             <InputGroup className="mb-3">
                 <Form.Control 
                     placeholder="Buscar"
@@ -21,31 +21,19 @@ function AllFriends() {
                     <span className="fw-bold">Conectados - {"23"}</span>
                 </div>
             </div>
-
-
-            <Table >
-                <thead>
-                    <tr>
-                        <th>Conectados - {"23"}</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <FontAwesomeIcon icon={faCircleUser} />
-                        </td>
-                        <td>
-                            <Button variant="secondary" className="rounded-circle me-2">
-                                <FontAwesomeIcon icon={faComment} />
-                            </Button>
-                            <Button variant="secondary" className="rounded-circle">
-                                <FontAwesomeIcon icon={faEllipsisVertical} />
-                            </Button>
-                        </td>
-                    </tr>
-                </tbody>
-            </Table>
+            <div className="d-flex flex-row row">
+                <div className="col-10">
+                    <FontAwesomeIcon icon={faCircleUser} />
+                </div>
+                <div className="col-2">
+                    <Button className="rounded-circle">
+                        <FontAwesomeIcon icon={faComment} />
+                    </Button>
+                    <Button className="rounded-circle">
+                        <FontAwesomeIcon icon={faEllipsisVertical} />
+                    </Button>
+                </div>
+            </div>
         </div>
     )
 }
