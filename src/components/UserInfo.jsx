@@ -1,4 +1,9 @@
 function UserInfo() {
+    return(
+        <div className="col">
+
+        </div>
+    )
 
 }
 
