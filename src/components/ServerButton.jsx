@@ -1,4 +1,4 @@
-function ServerButton( {id,serverId,name,img} ) {
+function ServerButton( {index,key,name,img} ) {
     
     const buttonStyle = {
         backgroundImage: `url("${img}")`,
@@ -19,7 +19,7 @@ function ServerButton( {id,serverId,name,img} ) {
     return (
         <>
             <div className="rounded bg-secondary rounded-5 rounded-top-0 mx-1">
-                <button className="rounded-circle btn" id={serverId} style={buttonStyle} alt={name} title={name}>
+                <button className="rounded-circle btn" id={key} style={buttonStyle} alt={name} title={name}>
                     <div className="rounded-circle" style={letterStyle}> {name[0]} </div>
                 </button>
             </div>

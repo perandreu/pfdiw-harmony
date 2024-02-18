@@ -1,13 +1,14 @@
-import exampleDirectMessages from '../exampleResources/examples';
+import ChatButton from './ChatButton'
 
+import {exampleDirectMessages} from '../exampleResources/examples';
 
 const renderedChats = [];
 
-exampleDirectMessages.forEach((element, index) => {
+exampleDirectMessages.forEach((item, index) => {
     renderedChats.push(
-        <ChatButton index={index} chatId={element.id} img={element.img} name={element.name} type={element.type} members={element.members} />
-    );
-});
+        <ChatButton index={index} key={item.id} img={item.img} name={item.name} type={item.type} members={item.members} />
+    )
+})
 
 function DirectMessages() {
 

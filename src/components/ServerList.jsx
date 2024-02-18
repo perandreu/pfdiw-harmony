@@ -1,21 +1,22 @@
 import ServerButton from './ServerButton';
 
-import exampleServerList from '../exampleResources/examples';
+import {exampleServerList} from '../exampleResources/examples';
 
 const renderedButtons = [];
 
-exampleServerList.forEach((element, index) => {
-    renderedButtons.push(
-        <ServerButton index={index} serverId={element.id} img={element.img} name={element.name} />
-    );
-});
+exampleServerList.forEach((item, index) => {
+        renderedButtons.push(
+            <ServerButton index={index} key={item.id} img={item.img} name={item.name}/>
+        );
+    });
 
 function ServerList() {
     //const { serverId } = useParams();
+    //const { exampleList } = props;
 
     return (
         <>
-            <div className='col-10 d-flex container-fluid bg-dark-subtle'>
+            <div className='d-flex container-fluid'>
                 {renderedButtons}
             </div>
         </>
