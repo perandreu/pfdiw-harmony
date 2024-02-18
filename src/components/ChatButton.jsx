@@ -4,7 +4,9 @@ function ServerButton({ index, key, name, img, type, members }) {
         backgroundImage: `url("${img}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundAttachment: '',
 
+        minWidth: '50px',
         width: '50px',
         height: '50px'
     }
@@ -13,20 +15,21 @@ function ServerButton({ index, key, name, img, type, members }) {
         width: '210px'
     }
 
+    const membersCount = (type == "group") ? <div className="fst-italic">{members} members</div> : "";
+
     return (
         <>
             <div className="">
-                <button className="btn rounded bg-secondary rounded-5 rounded-start-0 my-1" id={key} style={buttonStyle} alt={name} title={name}>
+                <button className="btn btn-secondary rounded rounded-5 rounded-start-0 my-1" id={key} style={buttonStyle} alt={name} title={name}>
                     <div className="d-flex">
-                    <div className="rounded-circle" style={imageStyle}></div>
+                        <img className="rounded-circle img-thumbnail" style={imageStyle} />
 
-                    <div className="ms-2 d-flex flex-column justify-content-start text-start">
-                        <div className="">{name}</div>
-                        <div className="fst-italic">{members} members</div>
+                        <div className="ms-2 d-flex flex-column justify-content-center text-start text-nowrap overflow-x-hidden">
+                            <div className="">{name}</div>
+                            {membersCount}
+                        </div>
+
                     </div>
-
-                    </div>
-
                 </button>
             </div>
         </>
