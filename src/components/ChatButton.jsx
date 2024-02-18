@@ -1,4 +1,4 @@
-function ServerButton({ index, key, name, img, type, members }) {
+function ChatButton({ index, key, name, img, type, members }) {
 
     const imageStyle = {
         backgroundImage: `url("${img}")`,
@@ -15,6 +15,10 @@ function ServerButton({ index, key, name, img, type, members }) {
         right:'0px'
     }
 
+    const overflow = {
+        textOverflow: 'ellipsis'
+    }
+
 
     const membersCount = (type == "group") ? <div className="fst-italic">{members} members</div> : "";
 
@@ -26,7 +30,7 @@ function ServerButton({ index, key, name, img, type, members }) {
                         <img className="rounded-circle img-thumbnail" style={imageStyle} />
 
                         <div className="ms-2 d-flex flex-column justify-content-center text-start text-nowrap overflow-x-hidden">
-                            <div>{name}</div>
+                            <div style={overflow}>{name}</div>
                             {membersCount}
                         </div>
 
@@ -37,4 +41,4 @@ function ServerButton({ index, key, name, img, type, members }) {
     )
 }
 
-export default ServerButton;
+export default ChatButton;
