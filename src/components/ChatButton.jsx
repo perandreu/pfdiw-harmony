@@ -1,29 +1,32 @@
-function ServerButton( {index,key,name,img,type,members} ) {
-    
-    const buttonStyle = {
+function ServerButton({ index, key, name, img, type, members }) {
+
+    const imageStyle = {
         backgroundImage: `url("${img}")`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center',  
+        backgroundPosition: 'center',
 
         width: '50px',
         height: '50px'
     }
-    const letterStyle = {
-        backgroundColor: 'rgba(0, 0, 0, 0.65)', 
-        width: '25px',
-        height: '25px',
-        color: 'white'
-        
+
+    const buttonStyle = {
+        width: '210px'
     }
 
     return (
         <>
-            <div className="rounded bg-secondary rounded-5 rounded-end-0 mx-1">
-                <button className="rounded-circle btn" id={key} style={buttonStyle} alt={name} title={name}>
-                    <div>
-                    <div>{name}</div>
+            <div className="">
+                <button className="btn rounded bg-secondary rounded-5 rounded-start-0 my-1" id={key} style={buttonStyle} alt={name} title={name}>
+                    <div className="d-flex">
+                    <div className="rounded-circle" style={imageStyle}></div>
+
+                    <div className="ms-2 d-flex flex-column justify-content-start text-start">
+                        <div className="">{name}</div>
+                        <div className="fst-italic">{members} members</div>
                     </div>
-                    <div>{members}</div>
+
+                    </div>
+
                 </button>
             </div>
         </>
