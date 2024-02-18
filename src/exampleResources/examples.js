@@ -49,7 +49,7 @@ export const exampleDirectMessages = [
         name: 'Murta',
         type: 'chat',
         members: '2',
-        img: 'blob:https://web.whatsapp.com/4e4b19c4-c661-4e73-8e7e-522005076627'
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeDKOXELNmmIasbSnSL-hK_fUGeOhy3eKxJw&usqp=CAU'
     }];
 
 export const exampleServerList = [
