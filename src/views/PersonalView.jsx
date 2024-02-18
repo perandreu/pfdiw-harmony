@@ -18,9 +18,9 @@ function selectView(type) {
 
 
 function PersonalView({ type }) {
-    const { id } =  useParams();
+    // const { id } =  useParams();
     return(
-        <div className="row g-0">
+        <div className="row g-0 w-100">
             {selectView(type)}
             <DirectMessagesView />
         </div>

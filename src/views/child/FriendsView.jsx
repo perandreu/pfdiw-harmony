@@ -3,7 +3,7 @@ import AllFriends from '../../components/AllFriends';
 
 function FriendsView() {
     return(
-        <div className='row col-10'>
+        <div className='row col-10 g-0'>
             <OptionsBar />
             <AllFriends />
         </div>

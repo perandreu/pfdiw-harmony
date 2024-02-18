@@ -15,7 +15,7 @@ function ServerList() {
 
     return (
         <>
-            <div className='d-flex container-fluid'>
+            <div className='col-10 d-flex container-fluid bg-dark-subtle'>
                 {renderedButtons}
             </div>
         </>

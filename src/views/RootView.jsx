@@ -7,6 +7,10 @@ function RootView() {
 
     return(
         <>
+            <div className="row g-0 mb-3 pb-2">
+                <ServerList />
+                <UserInfo />
+            </div>
             <Outlet />
         </>
     )
