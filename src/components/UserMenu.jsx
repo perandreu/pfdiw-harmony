@@ -2,43 +2,39 @@ import { faPeopleGroup, faEnvelope, faBoxArchive } from "@fortawesome/free-solid
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function UserMenu() {
 
+    const boxStyle = {
+        width: '210px',
+        height: 'auto'
+    }
+
+    const iconStyle = {
+        width: '25px',
+        height: '25px',
+        marginLeftt: '10px'
+    }
 
     return (
         <>
-            <table class="table table-hover">
-                <div className="list-group">
-                    <tr>
-                        <button className="d-flex list-group-item list-group-item-action">
-                            <th scope="row" className="px-2">
-                                <FontAwesomeIcon icon={faPeopleGroup} />
-                            </th>
-                            <td scope="col">
-                                Amigos
-                            </td>
-                        </button>
-                    </tr>
-                    <tr>
-                        <button className="d-flex list-group-item list-group-item-action">
-                            <th scope="row" className="px-2">
-                                <FontAwesomeIcon icon={faEnvelope} />
-                            </th>
-                            <td scope="col">
-                            Mensajes en espera
-                            </td>
-                        </button>
-                    </tr>
-                    <tr>
-                        <button className="d-flex list-group-item list-group-item-action">
-                            <th scope="row" className="px-2">
-                                <FontAwesomeIcon icon={faBoxArchive} />
-                            </th>
-                            <td scope="col">
-                            Biblioteca
-                            </td>
-                        </button>
-                    </tr>
-                </div>
-            </table >
+            <div className="list-group overflow-x-hidden" style={boxStyle}>
+                <button className="d-flex list-group-item list-group-item-action" title="Amigos">
+                    <div style={iconStyle}>
+                        <FontAwesomeIcon icon={faPeopleGroup} />
+                    </div>
+                    <div className="ms-2">Amigos</div>
+                </button>
+                <button className="d-flex list-group-item list-group-item-action" title="Mensajes en espera">
+                    <div style={iconStyle}>
+                        <FontAwesomeIcon icon={faEnvelope} />
+                    </div>
+                    <div className="ms-2 overflow-x-hidden text-nowrap">Mensajes en espera</div>
+                </button>
+                <button className="d-flex list-group-item list-group-item-action" title="Biblioteca">
+                    <div style={iconStyle}>
+                        <FontAwesomeIcon icon={faBoxArchive} />
+                    </div>
+                    <div className="ms-2">Biblioteca</div>
+                </button>
+            </div>
         </>
     )
 }
