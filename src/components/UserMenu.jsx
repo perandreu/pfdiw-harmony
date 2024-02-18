@@ -1,5 +1,6 @@
 import { faPeopleGroup, faEnvelope, faBoxArchive } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DirectMessages from "./DirectMessages";
 function UserMenu() {
 
     const boxStyle = {
@@ -34,6 +35,12 @@ function UserMenu() {
                     </div>
                     <div className="ms-2">Biblioteca</div>
                 </button>
+            </div>
+            <div className="form-control form-control-sm" style={boxStyle}>
+                <input className="form-control form-control-sm bg-black" type="text" name="searchChats" id="searchChats" placeholder="Busca una conversación" />
+            </div>
+            <div style={boxStyle}>
+                <DirectMessages />
             </div>
         </>
     )
