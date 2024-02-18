@@ -11,21 +11,22 @@ function ServerButton({ index, key, name, img, type, members }) {
         height: '50px'
     }
 
-    const buttonStyle = {
-        width: '210px'
+    const pillStyle = {
+        right:'0px'
     }
+
 
     const membersCount = (type == "group") ? <div className="fst-italic">{members} members</div> : "";
 
     return (
         <>
-            <div className="">
-                <button className="btn btn-secondary rounded rounded-5 rounded-end-0 my-1" id={key} style={buttonStyle} alt={name} title={name}>
+            <div style={pillStyle}>
+                <button className="d-flex btn btn-secondary rounded rounded-5 rounded-end-0 my-1 overflow-x-hidden justify-content-start container-fluid " id={key} alt={name} title={name}>
                     <div className="d-flex">
                         <img className="rounded-circle img-thumbnail" style={imageStyle} />
 
                         <div className="ms-2 d-flex flex-column justify-content-center text-start text-nowrap overflow-x-hidden">
-                            <div className="">{name}</div>
+                            <div>{name}</div>
                             {membersCount}
                         </div>
 
