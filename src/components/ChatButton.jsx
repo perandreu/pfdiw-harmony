@@ -15,9 +15,7 @@ function ChatButton({ index, key, name, img, type, members }) {
         right:'0px'
     }
 
-    const overflow = {
-        textOverflow: 'ellipsis'
-    }
+
 
 
     const membersCount = (type == "group") ? <div className="fst-italic">{members} members</div> : "";
@@ -29,8 +27,8 @@ function ChatButton({ index, key, name, img, type, members }) {
                     <div className="d-flex">
                         <img className="rounded-circle img-thumbnail" style={imageStyle} />
 
-                        <div className="ms-2 d-flex flex-column justify-content-center text-start text-nowrap overflow-x-hidden">
-                            <div style={overflow}>{name}</div>
+                        <div className="ms-2 d-flex flex-column justify-content-center text-start text-nowrap">
+                            <div>{name}</div>
                             {membersCount}
                         </div>
 
