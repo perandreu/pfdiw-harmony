@@ -1,4 +1,4 @@
-function ServerButton( {index,key,name,img} ) {
+function ServerButton( {img, name, id} ) {
     
     const letterStyle = {
         backgroundColor: 'rgba(0, 0, 0, 0.65)', 
@@ -23,13 +23,13 @@ function ServerButton( {index,key,name,img} ) {
         height: '55px'
     }
 
-    const isAddButton = (index == "none") ? '' : <div className="rounded-circle" style={letterStyle}> {name[0]} </div> ;
+    //const isAddButton = (index == "none") ? '' : <div className="rounded-circle" style={letterStyle}> {name[0]} </div> ;
 
     return (
         <>
-            <button className="btn btn-dark rounded-5 rounded-top-0 mx-1 d-flex justify-content-center" style={buttonStyle} id={key} alt={name} title={name}>
+            <button className="btn btn-dark rounded-5 rounded-top-0 mx-1 d-flex justify-content-center" style={buttonStyle} id={id} alt={name} title={name}>
                 <div className="img-thumbnail rounded-circle d-flex align-items-center justify-content-center" style={imgStyle}>
-                    {isAddButton}
+                    <div className="rounded-circle" style={letterStyle}> {name[0]} </div>
                 </div>
             </button>
         </>

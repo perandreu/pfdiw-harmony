@@ -4,12 +4,6 @@ import { Button, Form, InputGroup } from "react-bootstrap";
 import FriendButton from "./FriendButton";
 import { exampleDirectMessages } from "../exampleResources/examples";
 
-const user = {
-    name: "Juan",
-    status: "Jugando a Baldurs Gates 3",
-    id: 1253124
-};
-
 function AllFriends() {
     return(
         <div className="col-11 d-flex flex-column ps-5 pe-5">
@@ -31,7 +25,7 @@ function AllFriends() {
 
             <div className="d-flex flex-row row">
                 {
-                    exampleDirectMessages.filter(obj => obj.type == "chat").map(obj => <FriendButton user={obj} />)
+                    exampleDirectMessages.filter(obj => obj.type == "chat").map(obj => <FriendButton key={obj.id} user={obj} />)
                 }
             </div>
         </div>
