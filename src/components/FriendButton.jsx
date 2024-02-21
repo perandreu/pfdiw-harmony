@@ -1,6 +1,7 @@
 import { faComment, faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 
 function FriendButton({ user }) {
@@ -14,10 +15,15 @@ function FriendButton({ user }) {
         width: '50px',
         height: '50px'
     }
+    const navigate = useNavigate();
+
+    const chatHandeler = () => {
+        navigate("/me/chat/"+user.id);
+    }
 
     return(
         <div className="col-12 d-flex mb-2">
-            <Button className="rounded-4 ms-3 me-3 w-100 d-flex align-items-center felx-row justify-content-between" size="lg" variant="outline-secondary" id={"friendButton"+user.id}>
+            <div className="rounded-4 ms-3 me-3 w-100 d-flex align-items-center flex-row justify-content-between border border-secondary p-3">
                 <div className="d-flex flex-row">
                     <img style={imageStyle} className="me-2 rounded-circle img-thumbnail" />
                     <div className="d-flex flex-column justify-content-start text-start">
@@ -26,14 +32,14 @@ function FriendButton({ user }) {
                     </div>
                 </div>
                 <div>
-                    <Button className="rounded-circle me-2" style={{width: "40px", height: "40px"}} id={"friendChatButton"+user.id}>
+                    <Button className="rounded-circle me-2" style={{width: "40px", height: "40px"}} id={"friendChatButton"+user.id} onClick={chatHandeler}>
                         <FontAwesomeIcon icon={faComment} />
                     </Button>
                     <Button className="rounded-circle" style={{width: "40px", height: "40px"}} id={"friendConfigButton"+user.id}>
                         <FontAwesomeIcon icon={faEllipsisVertical} />
                     </Button>
                 </div>
-            </Button>
+            </div>
         </div>
     )
 }
