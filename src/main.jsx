@@ -18,7 +18,7 @@ const router = createBrowserRouter([
         element: <PersonalView type="chat" />
       },
       {
-        path: "me/friends",
+        path: "",
         element: <PersonalView type="friends" />
       },
       {
