@@ -5,6 +5,10 @@ import { useState } from "react";
 
 import { exampleChats } from '../../exampleResources/examples';
 
+const messagesBoxStyle = {
+    maxHeight: '72vh'
+}
+
 function UserMessageView({ id }) {
     const messageList = [];
     const replies = [];
@@ -31,14 +35,17 @@ function UserMessageView({ id }) {
     return (
         <div className='row col-10 g-0'>
             <OptionsBar type="user" />
-            <div className="ms-2 col-11 d-flex flex-column justify-content-start">
+            <div className="ms-2 col-11 d-flex flex-column justify-content-start" style={messagesBoxStyle}>
                 <div className="d-flex align-content-center mb-2">
                     <img className="rounded-circle img-thumbnail" style={imageStyle} />
-                    <div className="ms-3 align-self-center fw-bold fst-italic">{messageList[0].name} - Mensajes directos</div>
+                    <div className="ms-3 align-self-center fw-bold fst-italic">{messageList[0].name} - Mensajes</div>
                 </div>
-                <div className="">
+                <div className="overflow-auto">
                     {replies}
                 </div>
+            </div>
+            <div>
+                <input type="text" />
             </div>
         </div>
     )

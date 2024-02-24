@@ -1,10 +1,7 @@
-import { faPeopleGroup, faEnvelope, faBoxArchive, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faPeopleGroup, faEnvelope, faBoxArchive } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useMediaQuery } from 'react-responsive';
 
 function UserMenu() {
-
-    const isSmallScreen = useMediaQuery({ maxWidth: 600 });
 
     const boxStyle = {
         width: '210px',
