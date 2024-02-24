@@ -166,5 +166,145 @@ export const exampleChats = [
             message: 'toc toc...'
         }],
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeDKOXELNmmIasbSnSL-hK_fUGeOhy3eKxJw&usqp=CAU'
+    },{
+        id: '3',
+        name: 'Friends & Co.',
+        replies: [{
+            id: '0',
+            date: '01 Ene 2024',
+            name: 'Hatsune Miku',
+            message: '🎤 🎼 🎶'
+        }, {
+            id: '1',
+            date: '01 Ene 2024',
+            name: 'Kagamine Len',
+            message: '🎧'
+        }, {
+            id: '2',
+            date: '01 Ene 2024',
+            name: 'Yo',
+            message: '🎹'
+        }, {
+            id: '3',
+            date: '01 Ene 2024',
+            name: 'Hatsune Miku',
+            message: '🎶'
+        },{
+            id: '4',
+            date: '01 Ene 2024',
+            name: 'Hatsune Miku',
+            message: '🎤 🎼 🎶'
+        }, {
+            id: '5',
+            date: '01 Ene 2024',
+            name: 'Kagamine Len',
+            message: '🎧'
+        }, {
+            id: '6',
+            date: '01 Ene 2024',
+            name: 'Yo',
+            message: '🎹'
+        }, {
+            id: '7',
+            date: '01 Ene 2024',
+            name: 'Hatsune Miku',
+            message: '🎶'
+        }],
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeDKOXELNmmIasbSnSL-hK_fUGeOhy3eKxJw&usqp=CAU'
+    },{
+        id: '4',
+        name: 'Hatsune Miku',
+        replies: [{
+            id: '0',
+            date: '06 Ene 2024',
+            name: 'Hatsune Miku',
+            message: '🎙'
+        }, {
+            id: '1',
+            date: '06 Ene 2024',
+            name: 'Yo',
+            message: '!!!!'
+        }, {
+            id: '2',
+            date: '11 Ene 2024',
+            name: 'Hatsune Miku',
+            message: '🎤'
+        }, {
+            id: '3',
+            date: '11 Ene 2024',
+            name: 'Yo',
+            message: '...??'
+        }, {
+            id: '4',
+            date: '16 Ene 2024',
+            name: 'Hatsune Miku',
+            message: '🎧'
+        }, {
+            id: '5',
+            date: '16 Ene 2024',
+            name: 'Yo',
+            message: '...'
+        }],
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeDKOXELNmmIasbSnSL-hK_fUGeOhy3eKxJw&usqp=CAU'
+    },{
+        id: '5',
+        name: 'Pere Negre',
+        replies: [{
+            id: '0',
+            date: '20 Feb 2024',
+            name: 'Pere Negre',
+            message: 'He posat ja ses notes de es darrer examen. Te va anar molt malament.'
+        }, {
+            id: '1',
+            date: '20 Feb 2024',
+            name: 'Pere Negre',
+            message: 'Es próxim cop has de estudiar més, sa recuperació es dimarts qui ve.'
+        }, {
+            id: '2',
+            date: '20 Feb 2024',
+            name: 'Pere Negre',
+            message: 'Tot i que ja pots anar pensant en que repetiràs, ningú aprova es meus examens.'
+        }, {
+            id: '3',
+            date: '20 Feb 2024',
+            name: 'Yo',
+            message: 'Però si me va anar bé, ¿Com es posible?'
+        }, {
+            id: '4',
+            date: '20 Feb 2024',
+            name: 'Pere Negre',
+            message: 'Era broma, has tret un 4 i te fa mitja.'
+        }, {
+            id: '5',
+            date: '20 Feb 2024',
+            name: 'Pere Negre',
+            message: 'Però has de fer recuperació igualment.'
+        }],
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeDKOXELNmmIasbSnSL-hK_fUGeOhy3eKxJw&usqp=CAU'
+    },{
+        id: '6',
+        name: 'Murta',
+        replies: [{
+            id: '0',
+            date: 'Ayer',
+            name: 'Murta',
+            message: 'Me falta menjar.'
+        }, {
+            id: '1',
+            date: 'Ayer',
+            name: 'Murta',
+            message: 'Canvia sa arena.'
+        },{
+            id: '2',
+            date: 'Ayer',
+            name: 'Murta',
+            message: 'Me falta aigua.'
+        },{
+            id: '3',
+            date: 'Ayer',
+            name: 'Murta',
+            message: 'No me molestis.'
+        },],
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeDKOXELNmmIasbSnSL-hK_fUGeOhy3eKxJw&usqp=CAU'
     }
 ]
