@@ -1,7 +1,7 @@
 import OptionsBar from "../../components/OptionsBar";
 import MessageInput from "../../components/MessageInput";
 import ContentMessage from "../../components/ContentMessage";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { exampleChats } from '../../exampleResources/examples';
 
@@ -26,7 +26,7 @@ function UserMessageView({ id }) {
         if (event.target.value == "") return;
         if (event.code == "Enter") {
 
-            messageList[0].replies.push({ "id":event.target.value + count, "key":event.target.value + count, "date":"Enviado Ahora", "name":"Yo", "message":message });
+            messageList[0].replies.push({ "id":event.target.value + count, "key":event.target.value + count, "date":"Ahora", "name":"Yo", "message":message });
             setMessage("");
             replies.splice(0);
         }
@@ -49,6 +49,7 @@ function UserMessageView({ id }) {
     messageList[0].replies.forEach(msg => {
         replies.push(<ContentMessage id={msg.id} key={msg.id} date={msg.date} name={msg.name} message={msg.message} />);
     });
+
 
     return (
         <div className='row col-10 g-0'>
