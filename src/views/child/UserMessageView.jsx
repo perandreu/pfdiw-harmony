@@ -6,12 +6,31 @@ import { useState } from "react";
 import { exampleChats } from '../../exampleResources/examples';
 
 const messagesBoxStyle = {
-    maxHeight: '72vh'
+    height: '72vh',
+    width: '80vw'
+}
+const inputBoxStyle = {
+    width: '80vw'
 }
 
 function UserMessageView({ id }) {
     const messageList = [];
     const replies = [];
+    let count = 0;
+    const [message, setMessage] = useState('');
+    const messageChange = (event) => {
+        setMessage(event.target.value);
+    };
+    const pressButton = (event) => {
+        count++;
+        if (event.target.value == "") return;
+        if (event.code == "Enter") {
+
+            messageList[0].replies.push({ "id":event.target.value + count, "key":event.target.value + count, "date":"Enviado Ahora", "name":"Yo", "message":message });
+            setMessage("");
+            replies.splice(0);
+        }
+    };
     exampleChats.filter((c) => {
         if (c.id == id) {
             messageList.push(c);
@@ -30,7 +49,6 @@ function UserMessageView({ id }) {
     messageList[0].replies.forEach(msg => {
         replies.push(<ContentMessage id={msg.id} key={msg.id} date={msg.date} name={msg.name} message={msg.message} />);
     });
-    console.log(replies);
 
     return (
         <div className='row col-10 g-0'>
@@ -40,12 +58,13 @@ function UserMessageView({ id }) {
                     <img className="rounded-circle img-thumbnail" style={imageStyle} />
                     <div className="ms-3 align-self-center fw-bold fst-italic">{messageList[0].name} - Mensajes</div>
                 </div>
-                <div className="overflow-auto">
+                <div id="repliesBox" className="overflow-auto">
                     {replies}
                 </div>
             </div>
-            <div>
-                <input type="text" />
+            <div className="mx-3" style={inputBoxStyle}>
+                <label htmlFor="inputMessage" className="form-label mt-2"></label>
+                <input value={message} onChange={messageChange} onKeyDown={pressButton} type="text" className="form-control bg-secondary-subtle" id="inputMessage" placeholder="Escribe un mensaje..." />
             </div>
         </div>
     )
