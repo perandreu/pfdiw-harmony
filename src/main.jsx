@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import ServerView from './views/ServerView';
+import PersonalViewWrapper from './views/PersonalViewWrapper';
 import PersonalView from './views/PersonalView';
 import RootView from './views/RootView';
 
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "me/chat/:id",
-        element: <PersonalView type="chat" />
+        element: <PersonalViewWrapper type="chat" />
       },
       {
         path: "",

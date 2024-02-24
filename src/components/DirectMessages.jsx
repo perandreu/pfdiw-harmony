@@ -10,7 +10,7 @@ const renderedChats = [];
 
 exampleDirectMessages.forEach((item, index) => {
     renderedChats.push(
-        <ChatButton index={index} key={item.id} img={item.img} name={item.name} type={item.type} members={item.members} />
+        <ChatButton id={item.id} index={index} key={item.id} img={item.img} name={item.name} type={item.type} members={item.members} />
     )
 })
 
@@ -30,7 +30,7 @@ const inputBoxStyle = {
     width: '85%'
 }
 
-function DirectMessages() {
+function DirectMessages({ id }) {
     const [conversations, setConversations] = useState(renderedChats);
     const [search, setSearch] = useState('');
     
@@ -39,7 +39,7 @@ function DirectMessages() {
         conversations.splice(0);
         setConversations(conversations);
         exampleDirectMessages.map((chat, index) => {
-            if (chat.name.toLowerCase().includes(event.target.value.toLowerCase())) conversations.push(<ChatButton index={index} key={chat.id} img={chat.img} name={chat.name} type={chat.type} members={chat.members} />);
+            if (chat.name.toLowerCase().includes(event.target.value.toLowerCase())) conversations.push(<ChatButton id={chat.id} index={index} key={chat.id} img={chat.img} name={chat.name} type={chat.type} members={chat.members} />);
         })
         setConversations(conversations);
     };
