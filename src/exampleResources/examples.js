@@ -80,4 +80,91 @@ export const plusImage =
     img:"data:image/png;base64,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"
 }
 
-//export default {exampleDirectMessages,exampleServerList,plusImage}
+export const exampleChats = [
+    {
+        id: '0',
+        name: 'Debate Servidor',
+        replies: [{
+            id: '0',
+            date: '28 Sep 2023',
+            name: 'Pere Negre',
+            message: 'He creat aquest grup per poder adreçar els vostres dubtes.'
+        }, {
+            id: '1',
+            date: '28 Sep 2023',
+            name: 'Carlitos',
+            message: 'No se como entrar en harmony'
+        }, {
+            id: '2',
+            date: '28 Sep 2023',
+            name: 'Murta',
+            message: 'Perque ets beneit.'
+        }, {
+            id: '3',
+            date: '28 Sep 2023',
+            name: 'Carlitos',
+            message: 'Ke dise'
+        }, {
+            id: '4',
+            date: '29 Sep 2023',
+            name: 'Jhonny',
+            message: 'Aquí está Jhonny!'
+        }, {
+            id: '5',
+            date: '30 Sep 2023',
+            name: 'Pere Negre',
+            message: 'Basta de tonteries, si no feis servir es grup per es seu propòsit, el faré eliminar.'
+        }],
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeDKOXELNmmIasbSnSL-hK_fUGeOhy3eKxJw&usqp=CAU'
+    },{
+        id: '1',
+        name: 'Carlitos',
+        replies: [{
+            id: '0',
+            date: '01 Des 2023',
+            name: 'Yo',
+            message: 'Carlitos que fas que no estás estudiant??'
+        }, {
+            id: '1',
+            date: '01 Des 2023',
+            name: 'Carlitos',
+            message: 'Estoy en el Baldurs Gates, que esta tremendo'
+        }, {
+            id: '2',
+            date: '01 Des 2023',
+            name: 'Yo',
+            message: 'Si tio, és molt guay, però demà tenim examen!!'
+        }, {
+            id: '3',
+            date: '28 Sep 2023',
+            name: 'Carlitos',
+            message: 'Me lo se todo tranki'
+        }],
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeDKOXELNmmIasbSnSL-hK_fUGeOhy3eKxJw&usqp=CAU'
+    },{
+        id: '2',
+        name: 'Jhonny',
+        replies: [{
+            id: '0',
+            date: '24 Des 2023',
+            name: 'Jhonny',
+            message: 'Estás en casa? Tengo un regalo para ti'
+        }, {
+            id: '1',
+            date: '24 Des 2023',
+            name: 'Jhonny',
+            message: 'Hola? Estoy en la puerta'
+        }, {
+            id: '2',
+            date: '24 Des 2023',
+            name: 'Jhonny',
+            message: 'Ábreme...'
+        }, {
+            id: '3',
+            date: '24 Des 2023',
+            name: 'Jhonny',
+            message: 'toc toc...'
+        }],
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeDKOXELNmmIasbSnSL-hK_fUGeOhy3eKxJw&usqp=CAU'
+    }
+]
