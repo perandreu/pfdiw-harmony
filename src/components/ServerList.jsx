@@ -8,7 +8,7 @@ function ServerList() {
 
     return (
         <>
-            <div className='d-flex container-fluid'>
+            <div className='d-flex container-fluid '>
                 {
                     exampleServerList.map((obj) => <ServerButton key={obj.id} {...obj} />)
                 }
