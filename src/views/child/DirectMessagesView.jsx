@@ -3,7 +3,7 @@ import DirectMessages from "../../components/DirectMessages";
 
 function DirectMessagesView() {
     return(
-        <div className="row g-0 col-2">
+        <div className="d-flex flex-column g-0 col-2">
             <UserMenu />
             <DirectMessages />
         </div>
