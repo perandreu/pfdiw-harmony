@@ -1,5 +1,6 @@
 import { faPeopleGroup, faEnvelope, faBoxArchive } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 function UserMenu() {
 
@@ -17,12 +18,12 @@ function UserMenu() {
     return (
         <>
             <div className="list-group overflow-x-hidden" style={boxStyle}>
-                <button className="d-flex list-group-item list-group-item-action" title="Amigos">
+                <Link className="d-flex list-group-item list-group-item-action" title="Amigos" to={"/"}>
                     <div style={iconStyle}>
                         <FontAwesomeIcon icon={faPeopleGroup} />
                     </div>
                     <div className="ms-2">Amigos</div>
-                </button>
+                </Link>
                 <button className="d-flex list-group-item list-group-item-action" title="Mensajes en espera">
                     <div style={iconStyle}>
                         <FontAwesomeIcon icon={faEnvelope} />

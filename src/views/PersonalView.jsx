@@ -2,13 +2,12 @@ import UserMessageView from "./child/UserMessageView";
 import GroupMessageView from "./child/GroupMessageView";
 import FriendsView from "./child/FriendsView";
 import DirectMessagesView from "./child/DirectMessagesView";
-import { useParams } from "react-router-dom";
 
 
-function selectView(type,id) {
+function selectView(type) {
     switch(type) {
         case "chat":
-            return <UserMessageView id={id} />
+            return <UserMessageView />
         case "group":
             return <GroupMessageView />
         case "friends":
@@ -17,11 +16,11 @@ function selectView(type,id) {
 }
 
 
-function PersonalView({ type, id }) {
+function PersonalView({ type }) {
   
     return(
         <div className="row g-0 w-100">
-            {selectView(type,id)}
+            {selectView(type)}
             <DirectMessagesView />
         </div>
 
