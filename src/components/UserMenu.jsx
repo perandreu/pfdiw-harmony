@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function UserMenu() {
 
     const boxStyle = {
-        width: '210px',
+        width: 'auto',
         maxHeight: 'auto'
     }
 
