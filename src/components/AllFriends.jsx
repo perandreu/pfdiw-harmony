@@ -23,7 +23,7 @@ function AllFriends() {
                 </div>
             </div>
 
-            <div className="d-flex flex-row row">
+            <div className="d-flex flex-row row" style={{ maxHeight: '60vh', overflowY: 'auto' }}>
                 {
                     exampleDirectMessages.filter(obj => obj.type == "chat").map(obj => <FriendButton key={obj.id} user={obj} />)
                 }
