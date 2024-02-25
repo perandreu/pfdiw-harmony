@@ -6,7 +6,7 @@ import { exampleDirectMessages } from "../exampleResources/examples";
 
 function AllFriends() {
     return(
-        <div className="col-11 d-flex flex-column ps-5 pe-5">
+        <div className="col-12 d-flex flex-column ps-5 pe-5">
             <InputGroup className="mb-3">
                 <Form.Control 
                     placeholder="Buscar" title="Search Friend"

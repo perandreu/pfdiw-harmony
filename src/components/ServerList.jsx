@@ -3,8 +3,6 @@ import ServerButton from './ServerButton';
 import {exampleServerList, plusImage} from '../exampleResources/examples';
 
 function ServerList() {
-    //const { serverId } = useParams();
-    //const { exampleList } = props;
 
     return (
         <>

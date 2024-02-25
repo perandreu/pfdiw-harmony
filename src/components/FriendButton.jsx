@@ -1,6 +1,6 @@
 import { faComment, faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button } from "react-bootstrap";
+import { Button, DropdownButton } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 
