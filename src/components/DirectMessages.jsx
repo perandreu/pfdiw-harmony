@@ -48,8 +48,8 @@ function DirectMessages({ id }) {
         <>
         <div className="list-group border my-1" style={searchBoxStyle}>
             <div className="d-flex align-content-center" style={inputStyle}>
-                <label className="align-self-center mx-1" htmlFor="searchChats">
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                <label className="align-self-center mx-1" htmlFor="searchChats" title="Search Conversation">
+                    <FontAwesomeIcon icon={faMagnifyingGlass} title="Search Conversation" />
                 </label>
                 <input onChange={searchInputChange} value={search} className="rounded bg-black align-self-center" type="text" name="searchChats" id="searchChats" placeholder="Busca una conversación" style={inputBoxStyle} />
             </div>

@@ -67,7 +67,7 @@ function UserMessageView() {
         <div className='row col-10 g-0'>
             <div className="ms-2 col-11 d-flex flex-column justify-content-start" style={messagesBoxStyle}>
                 <div className="d-flex align-content-center mb-2">
-                    <img className="rounded-circle img-thumbnail" style={imageStyle} />
+                    <div className="rounded-circle img-thumbnail" style={imageStyle} />
                     <div className="ms-3 align-self-center fw-bold fst-italic">{messageList[0].name} - Mensajes</div>
                 </div>
                 <div id="repliesBox" className="overflow-auto">
