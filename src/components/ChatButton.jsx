@@ -29,7 +29,7 @@ function ChatButton({ id, index, key, name, img, type, members }) {
             <div style={pillStyle} onClick={chatHandeler}>
                 <button className="d-flex btn btn-secondary rounded rounded-5 rounded-end-0 my-1 overflow-x-hidden justify-content-start container-fluid " id={key} alt={name} title={name}>
                     <div className="d-flex">
-                        <img className="rounded-circle img-thumbnail" style={imageStyle} />
+                        <img className="rounded-circle img-thumbnail" style={imageStyle} alt="Imagen de Perfil" />
 
                         <div className="ms-2 d-flex flex-column justify-content-center text-start text-nowrap">
                             <div>{name}</div>
