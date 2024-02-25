@@ -15,11 +15,11 @@ exampleDirectMessages.forEach((item, index) => {
 })
 
 const searchBoxStyle = {
-    width: '210px',
+    width: 'auto',
     height: '40px'
 }
 const chatsBoxStyle = {
-    width: '210px',
+    width: 'auto',
     maxHeight: '59.3vh'
 }
 
