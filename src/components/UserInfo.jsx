@@ -26,13 +26,13 @@ const statusCircleStyle = {
 
 
 function UserInfo() {
-    let isSilenced = false;
     let isDeaf = false;
+    const [isSilenced, setIsSilenced] = useState(false);
     const [silence, setSilence] = useState(<FontAwesomeIcon icon={faMicrophoneLines} size="lg" />);
     const [deaf, setDeaf] = useState(<FontAwesomeIcon icon={faVolumeHigh} size="lg" />);
 
     const muteHandler = () => {
-        isSilenced = !isSilenced;
+        setIsSilenced(!isSilenced)
         let silence = isSilenced ? <FontAwesomeIcon icon={faMicrophoneLines} size="lg" /> : <FontAwesomeIcon icon={faMicrophoneLinesSlash} size="lg" />;
         setSilence(silence);
     }
