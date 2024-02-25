@@ -9,10 +9,10 @@ function AllFriends() {
         <div className="col-11 d-flex flex-column ps-5 pe-5">
             <InputGroup className="mb-3">
                 <Form.Control 
-                    placeholder="Buscar"
+                    placeholder="Buscar" title="Search Friend"
                 />
                 <Button variant="outline-secondary" id="search" >
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} title="Search Friend" />
                 </Button> 
             </InputGroup>
 
