@@ -47,12 +47,12 @@ function UserInfo() {
     }
 
     return (
-        <div className="col">
+        <div>
             <div className="d-flex ms-3 mt-2">
                 <div className="d-flex btn btn-dark">
                     <div className="rounded-circle img-thumbnail" style={imageStyle}></div>
                     <div>
-                        <div className="ms-2 align-self-center fw-bolder" title={exampleUserInfo[0].name + " (Yo)"}>{exampleUserInfo[0].name}</div>
+                        <div className="ms-2 align-self-center fw-bolder text-nowrap" title={exampleUserInfo[0].name + " (Yo)"}>{exampleUserInfo[0].name}</div>
                         <div className="d-flex" title={exampleUserInfo[0].status}>
                             <div className="me-1 align-self-center rounded-circle img-thumbnail" style={statusCircleStyle} />
                             <div className="ms-2 align-self-center fst-italic">{exampleUserInfo[0].status}</div>
