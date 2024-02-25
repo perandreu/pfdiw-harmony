@@ -30,7 +30,7 @@ const inputBoxStyle = {
     width: '85%'
 }
 
-function DirectMessages({ id }) {
+function DirectMessages() {
     const [conversations, setConversations] = useState(renderedChats);
     const [search, setSearch] = useState('');
     

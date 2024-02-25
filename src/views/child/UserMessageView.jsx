@@ -6,6 +6,7 @@ import { exampleChats } from '../../exampleResources/examples';
 import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
+import { useRef, useEffect } from 'react';
 
 const messagesBoxStyle = {
     height: '72vh',
@@ -17,6 +18,7 @@ const inputBoxStyle = {
 
 function UserMessageView() {
     const { id } = useParams();
+    const scrollableDivRef = useRef(null);
 
     const messageList = [];
     const replies = [];
@@ -64,6 +66,12 @@ function UserMessageView() {
         replies.push(<ContentMessage id={msg.id} key={msg.id} date={msg.date} name={msg.name} message={msg.message} />);
     });
 
+    useEffect(() => {
+        const scrollableDiv = scrollableDivRef.current;
+        if (scrollableDiv) {
+          scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
+        }
+      }, [replies]);
 
     return (
         <div className='row col-10 g-0'>
@@ -73,7 +81,7 @@ function UserMessageView() {
                     <div className="ms-3 align-self-center fw-bold fst-italic">{messageList[0].name} - Mensajes</div>
                 </div>
                 <hr />
-                <div id="repliesBox" className="overflow-auto mb-2 ps-1">
+                <div ref={scrollableDivRef} id="repliesBox" className="overflow-auto mb-2 ps-1">
                     {replies}
                 </div>
             </div>
@@ -87,7 +95,7 @@ function UserMessageView() {
                         onKeyDown={pressButton}
                         id="InputMessage"
                     />
-                    <Button variant="outline-secondary" id="sendMessage" onClick={(e) => pressButton(e, true)}>
+                    <Button variant="outline-secondary" id="sendMessage" onClick={(e) => pressButton(e, true)} aria-label="Enviar missatge">
                         <FontAwesomeIcon icon={faShare} />
                     </Button>
                 </InputGroup>
