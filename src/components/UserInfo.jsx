@@ -23,12 +23,16 @@ const statusCircleStyle = {
     width: '15px',
     height: '15px'
 }
-
+const buttonStyle = {
+    minWidth: '35px',
+    width: '45px',
+    height: '45px'
+}
 
 function UserInfo() {
-    let isDeaf = false;
     const [isSilenced, setIsSilenced] = useState(false);
     const [silence, setSilence] = useState(<FontAwesomeIcon icon={faMicrophoneLines} size="lg" />);
+    const [isDeaf, setIsDeaf] = useState(false);
     const [deaf, setDeaf] = useState(<FontAwesomeIcon icon={faVolumeHigh} size="lg" />);
 
     const muteHandler = () => {
@@ -37,7 +41,7 @@ function UserInfo() {
         setSilence(silence);
     }
     const deafHandler = () => {
-        isDeaf = !isDeaf;
+        setIsDeaf(!isDeaf);
         let deaf = isDeaf ? <FontAwesomeIcon icon={faVolumeHigh} size="lg" /> : <FontAwesomeIcon icon={faVolumeXmark} size="lg" />;
         setDeaf(deaf);
     }
@@ -56,9 +60,9 @@ function UserInfo() {
                     </div>
                 </div>
                 <div className="d-flex">
-                    <button onClick={muteHandler} className="btn btn-dark align-self-center" title="Silenciar">{silence}</button>
-                    <button onClick={deafHandler} className="btn btn-dark align-self-center" title="Ensordecer">{deaf}</button>
-                    <button className="btn btn-dark align-self-center" title="Ajustes de Usuario"><FontAwesomeIcon icon={faGear} size="lg" /></button>
+                    <button style={buttonStyle} onClick={muteHandler} className="btn btn-dark align-self-center d-flex justify-content-center align-items-center" title="Silenciar">{silence}</button>
+                    <button style={buttonStyle} onClick={deafHandler} className="btn btn-dark align-self-center d-flex justify-content-center align-items-center" title="Ensordecer">{deaf}</button>
+                    <button style={buttonStyle} className="btn btn-dark align-self-center d-flex justify-content-center align-items-center" title="Ajustes de Usuario"><FontAwesomeIcon icon={faGear} size="lg" /></button>
                 </div>
             </div>
         </div>
