@@ -20,7 +20,7 @@ const searchBoxStyle = {
 }
 const chatsBoxStyle = {
     width: 'auto',
-    maxHeight: '59.3vh'
+    maxHeight: 'auto'
 }
 
 const inputStyle = {
