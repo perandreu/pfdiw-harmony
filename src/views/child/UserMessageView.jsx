@@ -9,7 +9,7 @@ import { faShare } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useEffect } from 'react';
 
 const messagesBoxStyle = {
-    height: '72vh',
+    height: '60vh',
     width: '80vw'
 }
 const inputBoxStyle = {

@@ -4,9 +4,13 @@ import { Button, Form, InputGroup } from "react-bootstrap";
 import FriendButton from "./FriendButton";
 import { exampleDirectMessages } from "../exampleResources/examples";
 
+const boxStyle = {
+    height: '75vh'
+}
+
 function AllFriends() {
     return(
-        <div className="col-12 d-flex flex-column ps-5 pe-5">
+        <div className="col-12 d-flex flex-column ps-5 pe-5" style={boxStyle}>
             <InputGroup className="mb-3">
                 <Form.Control 
                     placeholder="Buscar" title="Search Friend"

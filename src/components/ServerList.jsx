@@ -6,7 +6,7 @@ function ServerList() {
 
     return (
         <>
-            <div className='d-flex container-fluid '>
+            <div className='d-flex flex-start '>
                 {
                     exampleServerList.map((obj) => <ServerButton key={obj.id} {...obj} />)
                 }

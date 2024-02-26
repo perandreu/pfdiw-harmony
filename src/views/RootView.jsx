@@ -7,7 +7,7 @@ function RootView() {
 
     return(
         <div className="vh-100 d-flex flex-column">
-            <div className="g-0 mb-3 pb-2 d-flex flex-row">
+            <div className="g-0 pb-2 d-flex flex-row flex-wrap justify-content-between">
                 <ServerList />
                 <UserInfo />
             </div>

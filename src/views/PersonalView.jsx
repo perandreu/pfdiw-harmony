@@ -19,7 +19,7 @@ function selectView(type) {
 function PersonalView({ type }) {
   
     return(
-        <div className="row g-0 w-100">
+        <div className="row g-0 w-100 ">
             {selectView(type)}
             <DirectMessagesView />
         </div>

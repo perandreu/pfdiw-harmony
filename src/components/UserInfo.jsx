@@ -47,7 +47,7 @@ function UserInfo() {
     }
 
     return (
-        <div>
+        <div className="">
             <div className="d-flex ms-3 mt-2">
                 <div className="d-flex btn btn-dark">
                     <div className="rounded-circle img-thumbnail" style={imageStyle}></div>
