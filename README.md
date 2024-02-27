@@ -1,3 +1,3 @@
 # pfdiw-harmony
 
-- Min 1024px W
+- Ultima practica de FPGMS DAW
